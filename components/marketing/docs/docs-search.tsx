@@ -80,7 +80,7 @@ export function DocsSearch(props: DialogProps): React.JSX.Element {
                 </div>
               }
             >
-              {group.items.map((item) => (
+              {group.items.map((item: { href: string; title: string }) => (
                 <CommandItem
                   key={item.href + item.title}
                   value={item.title}

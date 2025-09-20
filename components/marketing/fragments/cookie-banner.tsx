@@ -30,25 +30,7 @@ export function CookieBanner(): React.JSX.Element {
   return (
     <AnimatePresence>
       {showBanner && (
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{
-            opacity: 1,
-            y: 0,
-            transition: {
-              duration: 0.3,
-              delay: 2
-            }
-          }}
-          exit={{
-            opacity: 0,
-            y: 50,
-            transition: {
-              duration: 0.3
-            }
-          }}
-          className="fixed inset-x-2 bottom-2 z-50 rounded-xl sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm"
-        >
+        <div className="fixed inset-x-2 bottom-2 z-50 rounded-xl sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm">
           <div className="rounded-xl border bg-background p-4 shadow-lg">
             <p className="mb-3 text-sm">
               We use cookies primarily for analytics and to enhance your
@@ -79,7 +61,7 @@ export function CookieBanner(): React.JSX.Element {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </AnimatePresence>
   );

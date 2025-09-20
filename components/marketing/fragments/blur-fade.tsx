@@ -33,8 +33,8 @@ export function BlurFade({
   blur = '6px',
   ...other
 }: BlurFadeProps): React.JSX.Element {
-  const ref = React.useRef(null);
-  const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
+  const ref = React.useRef<HTMLDivElement>(null);
+  const inViewResult = useInView(ref as React.RefObject<Element>, { once: true, margin: inViewMargin });
   const isInView = !inView || inViewResult;
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})` },

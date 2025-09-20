@@ -70,12 +70,7 @@ export function BentoPipelinesCard({
                 key={stage.id}
                 className="hover:!opacity-100 group-hover:opacity-40"
               >
-                <motion.div
-                  className="flex items-center space-x-2 rounded-md pr-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
+                <div className="flex items-center space-x-2 rounded-md pr-4">
                   <Badge
                     id={`stage-${stage.label}`}
                     variant="secondary"
@@ -91,7 +86,7 @@ export function BentoPipelinesCard({
                   <span className="w-8 text-right text-sm font-medium">
                     {stage.deals}
                   </span>
-                </motion.div>
+                </div>
               </div>
             ))}
           </div>

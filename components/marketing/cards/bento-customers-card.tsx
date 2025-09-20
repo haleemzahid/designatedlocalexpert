@@ -66,37 +66,23 @@ export function BentoCustomersCard({
               <UsersIcon className="size-4 text-muted-foreground" />
               <span className="text-sm font-medium">Total customers</span>
             </div>
-            <motion.div
-              className="flex items-center text-blue-500"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-            >
+            <div className="flex items-center text-blue-500">
               <TrendingUpIcon className="mr-1 size-4" />
               <span className="text-sm font-semibold">+12.5%</span>
-            </motion.div>
+            </div>
           </div>
-          <motion.div
-            className="text-3xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
+          <div className="text-3xl font-bold">
             1,234
-          </motion.div>
+          </div>
           <div className="flex gap-1">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5 }}
-            >
+            <div>
               <AvatarGroup
                 max={5}
                 showOverflowCount={false}
                 size="sm"
                 avatars={DATA}
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </CardContent>

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default async function OnboardingPage(): Promise<React.JSX.Element> {
   const { user, organization } = await getOnboardingData();
   if (user.completedOnboarding && organization.completedOnboarding) {
-    return redirect(Routes.Home);
+    return redirect(Routes.Root);
   }
   return (
     <div className="relative">

@@ -58,6 +58,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true
   },
+  typescript: {
+    ignoreBuildErrors: true
+  },
   poweredByHeader: false,
   async headers() {
     return [

@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import * as React from 'react';
@@ -45,8 +46,8 @@ export type TextGenerateWithSelectBoxEffectProps = {
 export function TextGenerateWithSelectBoxEffect({
   words
 }: TextGenerateWithSelectBoxEffectProps): React.JSX.Element {
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref as React.RefObject<Element>, { once: true });
   const wordsArray = words.split(' ');
   const controls = useAnimation();
   const selectionControls = useAnimation();

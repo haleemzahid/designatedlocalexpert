@@ -29,26 +29,26 @@ export function DocsSidebar(): React.JSX.Element {
           </h4>
           {item?.items?.length && (
             <div className="grid grid-flow-row auto-rows-max text-sm">
-              {item.items.map((item, index) =>
-                item.href ? (
+              {item.items.map((subItem: { href?: string; title: string }, subIndex: number) =>
+                subItem.href ? (
                   <Link
-                    key={index}
-                    href={item.href}
+                    key={subIndex}
+                    href={subItem.href}
                     className={cn(
                       'group flex w-full items-center rounded-md border border-transparent px-2 py-1 hover:underline',
-                      pathname === item.href
+                      pathname === subItem.href
                         ? 'font-medium text-foreground'
                         : 'text-muted-foreground'
                     )}
                   >
-                    {item.title}
+                    {subItem.title}
                   </Link>
                 ) : (
                   <span
-                    key={index}
+                    key={subIndex}
                     className="flex w-full cursor-not-allowed items-center rounded-md p-2 text-muted-foreground hover:underline"
                   >
-                    {item.title}
+                    {subItem.title}
                   </span>
                 )
               )}
