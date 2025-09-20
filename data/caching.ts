@@ -106,4 +106,5 @@ export class Caching {
   }
 }
 
-export const defaultRevalidateTimeInSeconds = process.env.NODE_ENV === 'production' ? 3600 : 120;
+export const defaultRevalidateTimeInSeconds =
+  process.env.NODE_ENV === 'production' ? 3600 : 120;

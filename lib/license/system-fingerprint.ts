@@ -17,7 +17,7 @@ export class SystemFingerprintGenerator {
     const userAgent = req.headers.get('user-agent') || '';
     const acceptLanguage = req.headers.get('accept-language') || '';
     const platform = this.extractPlatform(userAgent);
-    
+
     const components = {
       userAgent: userAgent.slice(0, 200), // Truncate for storage
       platform,

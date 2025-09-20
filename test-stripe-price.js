@@ -2,8 +2,11 @@ import { stripeServer } from '@/lib/billing/stripe-server';
 
 async function testStripePrice() {
   try {
-    console.log('Testing NTCLIPBOARD_PRODUCT_PRICE_ID:', process.env.NTCLIPBOARD_PRODUCT_PRICE_ID);
-    
+    console.log(
+      'Testing NTCLIPBOARD_PRODUCT_PRICE_ID:',
+      process.env.NTCLIPBOARD_PRODUCT_PRICE_ID
+    );
+
     if (!process.env.NTCLIPBOARD_PRODUCT_PRICE_ID) {
       console.error('NTCLIPBOARD_PRODUCT_PRICE_ID not found in environment');
       return;

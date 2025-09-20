@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { HeroContent } from './hero-content-client';
 import { AboutSection } from './about-section';
+import { HeroContent } from './hero-content-client';
 
 export function NTClipboardHero(): React.JSX.Element {
   return (

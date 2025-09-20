@@ -18,7 +18,7 @@ export function isValidTaxRateId(taxRateId: string | undefined): boolean {
  */
 export function getTaxRateForCheckout(): string | undefined {
   const taxRateId = process.env.PRO_PRODUCT_Tax_ID;
-  
+
   // Always return the configured tax rate if valid
   // The checkout session will handle conflicts with automatic tax
   return isValidTaxRateId(taxRateId) ? taxRateId : undefined;

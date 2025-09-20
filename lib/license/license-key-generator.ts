@@ -12,7 +12,8 @@ export interface LicenseKeyData {
 }
 
 export class LicenseKeyGenerator {
-  private static readonly ENCRYPTION_KEY = process.env.LICENSE_ENCRYPTION_KEY || '';
+  private static readonly ENCRYPTION_KEY =
+    process.env.LICENSE_ENCRYPTION_KEY || '';
   private static readonly ALGORITHM = 'aes-256-gcm';
   private static readonly PRODUCT_CODE = 'NTCB'; // NTClipboard
 
@@ -26,7 +27,7 @@ export class LicenseKeyGenerator {
 
     const dataString = JSON.stringify(keyData);
     const encrypted = this.encrypt(dataString);
-    
+
     // Format: NTCB-XXXX-XXXX-XXXX-XXXX-XXXX
     const segments = [
       this.PRODUCT_CODE,
@@ -40,7 +41,11 @@ export class LicenseKeyGenerator {
     return segments.join('-');
   }
 
-  static validateLicenseKey(licenseKey: string): { valid: boolean; data?: LicenseKeyData; error?: string } {
+  static validateLicenseKey(licenseKey: string): {
+    valid: boolean;
+    data?: LicenseKeyData;
+    error?: string;
+  } {
     try {
       const segments = licenseKey.split('-');
       if (segments.length !== 6 || segments[0] !== this.PRODUCT_CODE) {
@@ -63,10 +68,10 @@ export class LicenseKeyGenerator {
     const iv = crypto.randomBytes(16);
     const key = crypto.scryptSync(this.ENCRYPTION_KEY, 'salt', 32);
     const cipher = crypto.createCipheriv(this.ALGORITHM, key, iv);
-    
+
     let encrypted = cipher.update(text, 'utf8', 'hex');
     encrypted += cipher.final('hex');
-    
+
     return iv.toString('hex') + ':' + encrypted;
   }
 
@@ -75,11 +80,11 @@ export class LicenseKeyGenerator {
     const iv = Buffer.from(parts[0], 'hex');
     const encrypted = parts[1];
     const key = crypto.scryptSync(this.ENCRYPTION_KEY, 'salt', 32);
-    
+
     const decipher = crypto.createDecipheriv(this.ALGORITHM, key, iv);
     let decrypted = decipher.update(encrypted, 'hex', 'utf8');
     decrypted += decipher.final('utf8');
-    
+
     return decrypted;
   }
 }

@@ -7,7 +7,10 @@ console.log('Testing License System...');
 // Test license key generation
 const testPurchaseId = 'test-purchase-123';
 const testEmail = 'test@example.com';
-const licenseKey = LicenseKeyGenerator.generateLicenseKey(testPurchaseId, testEmail);
+const licenseKey = LicenseKeyGenerator.generateLicenseKey(
+  testPurchaseId,
+  testEmail
+);
 console.log('Generated license key:', licenseKey);
 
 // Test license key format validation
@@ -22,7 +25,8 @@ console.log('Hash consistency test:', hash1 === hash2 ? 'PASS' : 'FAIL');
 // Test system fingerprinting
 const mockRequest = new Request('http://localhost', {
   headers: {
-    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+    'user-agent':
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
     'accept-language': 'en-US',
     'x-timezone': 'UTC',
     'x-screen-resolution': '1920x1080',

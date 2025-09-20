@@ -1,7 +1,8 @@
 import 'server-only';
 
-import { stripeServer } from '@/lib/billing/stripe-server';
 import { cache } from 'react';
+
+import { stripeServer } from '@/lib/billing/stripe-server';
 
 export interface ProductPricing {
   id: string;
@@ -27,13 +28,14 @@ async function fetchNTClipboardPricing(): Promise<ProductPricing | null> {
     );
 
     const product = price.product as any;
-    
+
     return {
       id: price.id,
       amount: price.unit_amount || 0,
       currency: price.currency,
       productName: product.name || 'NTClipboard Desktop Application',
-      productDescription: product.description || 'Complete NTClipboard Desktop Application',
+      productDescription:
+        product.description || 'Complete NTClipboard Desktop Application',
       formattedPrice: formatPrice(price.unit_amount || 0, price.currency)
     };
   } catch (error) {

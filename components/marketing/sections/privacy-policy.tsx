@@ -1,5 +1,12 @@
 import * as React from 'react';
-import { AlertCircleIcon, BookIcon, ScaleIcon, ShieldIcon, UserIcon, DatabaseIcon } from 'lucide-react';
+import {
+  AlertCircleIcon,
+  BookIcon,
+  DatabaseIcon,
+  ScaleIcon,
+  ShieldIcon,
+  UserIcon
+} from 'lucide-react';
 
 import { GridSection } from '@/components/marketing/fragments/grid-section';
 import { SiteHeading } from '@/components/marketing/fragments/site-heading';
@@ -101,8 +108,10 @@ export function PrivacyPolicy(): React.JSX.Element {
 
         <Alert className="rounded-lg border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-950/20">
           <AlertDescription className="text-base">
-            <strong>DLE Network Overview:</strong> The DLE Network operates www.designatedlocalexpert.com and www.mrcali.com.
-            We are overseen by Mr. Cali, LLC, a Real Estate Network company that understands the importance of intellectual property protection.
+            <strong>DLE Network Overview:</strong> The DLE Network operates
+            www.designatedlocalexpert.com and www.mrcali.com. We are overseen by
+            Mr. Cali, LLC, a Real Estate Network company that understands the
+            importance of intellectual property protection.
           </AlertDescription>
         </Alert>
 
@@ -153,10 +162,12 @@ export function PrivacyPolicy(): React.JSX.Element {
                 Network Protection & Confidentiality
               </CardTitle>
               <p className="text-sm leading-relaxed mt-2 text-green-800 dark:text-green-300">
-                The DLE Network is governed by Mr. Cali LLC, which holds common law trademarks throughout
-                the United States and Canada, plus federal and state trademarks. When we recruit members,
-                we file state trademarks and create binding trademark licensing agreements. We keep all member
-                and visitor information confidential and do not sell information to third-party vendors.
+                The DLE Network is governed by Mr. Cali LLC, which holds common
+                law trademarks throughout the United States and Canada, plus
+                federal and state trademarks. When we recruit members, we file
+                state trademarks and create binding trademark licensing
+                agreements. We keep all member and visitor information
+                confidential and do not sell information to third-party vendors.
               </p>
             </CardContent>
           </Card>
@@ -166,13 +177,28 @@ export function PrivacyPolicy(): React.JSX.Element {
               Contact Information
             </CardTitle>
             <div className="space-y-2 text-sm leading-relaxed">
-              <p>For questions about this Privacy Policy or any changes, please contact us:</p>
+              <p>
+                For questions about this Privacy Policy or any changes, please
+                contact us:
+              </p>
               <div className="space-y-1">
                 <p>
-                  Email: <a href="mailto:Info@MrCali.com" className="text-blue-500 hover:underline">Info@MrCali.com</a>
+                  Email:{' '}
+                  <a
+                    href="mailto:Info@MrCali.com"
+                    className="text-blue-500 hover:underline"
+                  >
+                    Info@MrCali.com
+                  </a>
                 </p>
                 <p>
-                  For children's privacy concerns: <a href="mailto:contact@MrCali.com" className="text-blue-500 hover:underline">contact@MrCali.com</a>
+                  For children's privacy concerns:{' '}
+                  <a
+                    href="mailto:contact@MrCali.com"
+                    className="text-blue-500 hover:underline"
+                  >
+                    contact@MrCali.com
+                  </a>
                 </p>
               </div>
             </div>
@@ -181,8 +207,10 @@ export function PrivacyPolicy(): React.JSX.Element {
           <Card className="bg-gray-50 dark:bg-gray-900/50">
             <CardContent className="pt-6">
               <p className="text-xs text-muted-foreground">
-                <strong>Last Modified:</strong> October 7th, 2019<br />
-                <strong>Note:</strong> Any rights not expressly granted herein are reserved by DLE Network and Mr. Cali LLC.
+                <strong>Last Modified:</strong> October 7th, 2019
+                <br />
+                <strong>Note:</strong> Any rights not expressly granted herein
+                are reserved by DLE Network and Mr. Cali LLC.
               </p>
             </CardContent>
           </Card>

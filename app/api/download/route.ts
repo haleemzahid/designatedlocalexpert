@@ -1,8 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { NextRequest, NextResponse } from 'next/server';
-import { z } from 'zod';
 import AdmZip from 'adm-zip';
+import { z } from 'zod';
+
 import { prisma } from '@/lib/db/prisma';
 
 const downloadSchema = z.object({
@@ -96,14 +97,14 @@ For support, contact: support@ntclipboard.com
 
     // Create a new ZIP file with both installer and license
     const zip = new AdmZip();
-    
+
     // Add the original installer
     const installerBuffer = fs.readFileSync(filePath);
     zip.addFile('NTClipboard-Setup.exe', installerBuffer);
-    
+
     // Add the license file
     zip.addFile('License-Key.txt', Buffer.from(licenseFileContent, 'utf8'));
-    
+
     // Add readme file
     const readmeContent = `NTClipboard Installation Package
 ================================
@@ -122,7 +123,7 @@ Your license key is: ${purchase.licenseKey}
 
 Need help? Contact support@ntclipboard.com
 `;
-    
+
     zip.addFile('README.txt', Buffer.from(readmeContent, 'utf8'));
 
     // Generate the final ZIP buffer
@@ -137,7 +138,8 @@ Need help? Contact support@ntclipboard.com
     return new Response(zipBuffer, {
       headers: {
         'Content-Type': 'application/zip',
-        'Content-Disposition': 'attachment; filename="NTClipboard-Licensed.zip"',
+        'Content-Disposition':
+          'attachment; filename="NTClipboard-Licensed.zip"',
         'Content-Length': zipBuffer.length.toString(),
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         Pragma: 'no-cache',

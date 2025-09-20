@@ -7,9 +7,9 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
+  FaMapMarkerAlt,
   FaPinterestP,
-  FaMapMarkerAlt
+  FaYoutube
 } from 'react-icons/fa';
 
 // import { toast } from 'sonner';
@@ -24,6 +24,7 @@ import { ThemeSwitcher } from '@/components/marketing/fragments/theme-switcher';
 // import { Input } from '@/components/ui/input';
 import { AppInfo } from '@/constants/app-info';
 import { Routes } from '@/constants/routes';
+
 import { FacebookIcon } from '../ui/brand-icons';
 
 export function Footer(): React.JSX.Element {
@@ -113,42 +114,48 @@ export function Footer(): React.JSX.Element {
 
           {/* Right - Social Media Icons */}
           <div className="flex items-center space-x-3">
-            <a target="_blank"
+            <a
+              target="_blank"
               href="https://www.facebook.com/designatedlocalexpertnetwork"
               className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
               title="Facebook"
             >
-              <FacebookIcon></FacebookIcon  >
+              <FacebookIcon></FacebookIcon>
             </a>
-            <a target="_blank"
+            <a
+              target="_blank"
               href="https://www.instagram.com/designatedlocalexpert/"
               className="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors"
               title="Instagram"
             >
               <FaInstagram className="w-5 h-5 text-white" />
             </a>
-            <a target="_blank"
+            <a
+              target="_blank"
               href="https://www.linkedin.com/company/designated-local-expertdle/"
               className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors"
               title="LinkedIn"
             >
               <FaLinkedinIn className="w-5 h-5 text-white" />
             </a>
-            <a target="_blank"
+            <a
+              target="_blank"
               href="https://www.youtube.com/channel/UCff1cUEcb4MEIr3Tn4nzcpg"
               className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors"
               title="YouTube"
             >
               <FaYoutube className="w-5 h-5 text-white" />
             </a>
-            <a target="_blank"
+            <a
+              target="_blank"
               href="https://www.pinterest.com/designatedlocalexpertnetwork/"
               className="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors"
               title="Pinterest"
             >
               <FaPinterestP className="w-5 h-5 text-white" />
             </a>
-            <a target="_blank"
+            <a
+              target="_blank"
               href="https://www.google.com/maps/place/Designated+Local+Expert/@46.423669,-129.9427086,3z/data=!4m6!3m5!1s0x6550104a4fb84ced:0x1afdd9b2892d3516!8m2!3d46.423669!4d-129.9427086!16s%2Fg%2F11kp_27w34?sa=X&ved=1t:2428&ictx=111&entry=tts&g_ep=EgoyMDI0MDUwNy4xKgBIAVAD"
               className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700 transition-colors"
               title="Google Maps"
@@ -161,9 +168,10 @@ export function Footer(): React.JSX.Element {
         {/* Bottom Disclaimer */}
         <div className="mt-8 pt-4 border-t border-gray-700 text-xs text-gray-400 text-center">
           <p>
-            Disclaimer: Designated Local Expert is an Equal Opportunity Employer and
-            supports the Fair Housing Act and equal opportunity housing. If you have a disability
-            that is preventing you from experiencing this website, call
+            Disclaimer: Designated Local Expert is an Equal Opportunity Employer
+            and supports the Fair Housing Act and equal opportunity housing. If
+            you have a disability that is preventing you from experiencing this
+            website, call
           </p>
         </div>
 

@@ -12,7 +12,6 @@ type CalloutProps = AlertProps & {
   title?: string;
 };
 
-
 export function Callout({
   title,
   children,

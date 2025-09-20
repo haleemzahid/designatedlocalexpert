@@ -164,9 +164,7 @@ function DocsMobileMenu({
   return (
     <div className="fixed inset-0 z-50 mt-[69px] overflow-y-auto bg-background animate-in fade-in-0">
       <div className="flex size-full flex-col items-start space-y-3 p-4">
-        <ul className="w-full">
-          {/* No docs links for simplified version */}
-        </ul>
+        <ul className="w-full">{/* No docs links for simplified version */}</ul>
         <div className="flex w-full items-center justify-between gap-2 border-y border-border/40 p-4">
           <div className="text-base font-medium">Theme</div>
           <ThemeSwitcher />

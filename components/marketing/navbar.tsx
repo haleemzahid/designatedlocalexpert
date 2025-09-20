@@ -53,9 +53,7 @@ export function Navbar(): React.JSX.Element {
                         'rounded-xl text-[15px] font-normal data-[active]:bg-accent'
                       )}
                     >
-                      <Link href={Routes.Root}>
-                        Home
-                      </Link>
+                      <Link href={Routes.Root}>Home</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
@@ -67,9 +65,7 @@ export function Navbar(): React.JSX.Element {
                         'rounded-xl text-[15px] font-normal data-[active]:bg-accent'
                       )}
                     >
-                      <Link href={Routes.PrivacyPolicy}>
-                        Privacy Policy
-                      </Link>
+                      <Link href={Routes.PrivacyPolicy}>Privacy Policy</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
@@ -81,9 +77,7 @@ export function Navbar(): React.JSX.Element {
                         'rounded-xl text-[15px] font-normal data-[active]:bg-accent'
                       )}
                     >
-                      <Link href={Routes.TermsOfService}>
-                        Terms of Service
-                      </Link>
+                      <Link href={Routes.TermsOfService}>Terms of Service</Link>
                     </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>

@@ -2,7 +2,7 @@
 
 /**
  * NTClipboard License System Setup Script
- * 
+ *
  * This script completes the setup of the license key protection system.
  * Run this after implementing all the license system files.
  */
@@ -18,7 +18,9 @@ console.log('=====================================\n');
 // Check if running in correct directory
 const packageJsonPath = path.join(process.cwd(), 'package.json');
 if (!fs.existsSync(packageJsonPath)) {
-  console.error('❌ Error: Please run this script from the project root directory');
+  console.error(
+    '❌ Error: Please run this script from the project root directory'
+  );
   process.exit(1);
 }
 
@@ -34,14 +36,16 @@ console.log('1️⃣ Checking dependencies...');
 // Check if required packages are installed
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 const requiredDeps = ['adm-zip', 'nanoid'];
-const missingDeps = requiredDeps.filter(dep => 
-  !packageJson.dependencies[dep] && !packageJson.devDependencies[dep]
+const missingDeps = requiredDeps.filter(
+  (dep) => !packageJson.dependencies[dep] && !packageJson.devDependencies[dep]
 );
 
 if (missingDeps.length > 0) {
   console.log('📦 Installing missing dependencies...');
   try {
-    execSync(`npm install ${missingDeps.join(' ')} @types/adm-zip`, { stdio: 'inherit' });
+    execSync(`npm install ${missingDeps.join(' ')} @types/adm-zip`, {
+      stdio: 'inherit'
+    });
     console.log('✅ Dependencies installed successfully');
   } catch (error) {
     console.error('❌ Failed to install dependencies:', error.message);
@@ -67,7 +71,7 @@ if (!hasLicenseKey) {
   console.log('🔑 Generating secure encryption key...');
   const encryptionKey = crypto.randomBytes(32).toString('hex');
   const licenseKeyLine = `\n# License System Configuration\nLICENSE_ENCRYPTION_KEY=${encryptionKey}\n`;
-  
+
   if (fs.existsSync(envPath)) {
     fs.appendFileSync(envPath, licenseKeyLine);
   } else {
@@ -83,11 +87,16 @@ console.log('\n3️⃣ Running database migration...');
 try {
   // Check if migration already exists
   const migrationsDir = path.join(process.cwd(), 'prisma', 'migrations');
-  const migrationExists = fs.existsSync(migrationsDir) && 
-    fs.readdirSync(migrationsDir).some(dir => dir.includes('add_license_system'));
-  
+  const migrationExists =
+    fs.existsSync(migrationsDir) &&
+    fs
+      .readdirSync(migrationsDir)
+      .some((dir) => dir.includes('add_license_system'));
+
   if (!migrationExists) {
-    execSync('npx prisma migrate dev --name add_license_system', { stdio: 'inherit' });
+    execSync('npx prisma migrate dev --name add_license_system', {
+      stdio: 'inherit'
+    });
     console.log('✅ Database migration completed');
   } else {
     console.log('✅ License system migration already exists');
@@ -111,13 +120,13 @@ const requiredFiles = [
   'types/license.ts'
 ];
 
-const missingFiles = requiredFiles.filter(file => 
-  !fs.existsSync(path.join(process.cwd(), file))
+const missingFiles = requiredFiles.filter(
+  (file) => !fs.existsSync(path.join(process.cwd(), file))
 );
 
 if (missingFiles.length > 0) {
   console.error('❌ Missing required files:');
-  missingFiles.forEach(file => console.error(`   - ${file}`));
+  missingFiles.forEach((file) => console.error(`   - ${file}`));
   process.exit(1);
 }
 
@@ -130,7 +139,9 @@ try {
   execSync('npx tsx tests/license-system.test.ts', { stdio: 'pipe' });
   console.log('✅ License system tests passed');
 } catch (error) {
-  console.log('⚠️  License system test failed, but installation may still be successful');
+  console.log(
+    '⚠️  License system test failed, but installation may still be successful'
+  );
 }
 
 console.log('\n🎉 License System Setup Complete!');
