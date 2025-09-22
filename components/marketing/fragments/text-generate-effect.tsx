@@ -8,49 +8,36 @@ import {
   type HTMLMotionProps
 } from 'framer-motion';
 
-export type TextGenerateEffectProps = HTMLMotionProps<'div'> & {
+export type TextGenerateEffectProps = {
   words: string;
+  className?: string;
 };
 
 export function TextGenerateEffect({
   words,
-  ...other
+  className
 }: TextGenerateEffectProps): React.JSX.Element {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(' ');
   const renderWords = () => {
     return (
-      <motion.div ref={scope}>
+      <div ref={scope}>
         {wordsArray.map((word, idx) => {
           return (
-            <motion.span
+            <span
               key={word + idx.toString()}
               className="opacity-0"
             >
               {word}{' '}
-            </motion.span>
+            </span>
           );
         })}
-      </motion.div>
+      </div>
     );
   };
   return (
-    <motion.div
-      onViewportEnter={() => {
-        animate(
-          'span',
-          {
-            opacity: 1
-          },
-          {
-            duration: 1,
-            delay: stagger(0.13)
-          }
-        );
-      }}
-      {...other}
-    >
+    <div className={className}>
       {renderWords()}
-    </motion.div>
+    </div>
   );
 }

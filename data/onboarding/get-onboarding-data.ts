@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/db/prisma';
 
@@ -24,16 +25,42 @@ export async function getOnboardingData(): Promise<OnboardingData> {
 
   const user = await prisma.user.findUnique({
     where: { id: session.user.id },
+=======
+import { cache } from 'react';
+import { redirect } from 'next/navigation';
+
+import { Routes } from '@/constants/routes';
+import { auth } from '@/lib/auth';
+import { prisma } from '@/lib/db/prisma';
+
+export const getOnboardingData = cache(async () => {
+  const session = await auth();
+
+  if (!session?.user) {
+    return redirect(Routes.Root);
+  }
+
+  const user = await prisma.user.findUnique({
+    where: {
+      id: session.user.id!
+    },
+>>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66
     select: {
       id: true,
       name: true,
       email: true,
+<<<<<<< HEAD
+=======
+      phone: true,
+      image: true,
+>>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66
       completedOnboarding: true,
       organizationId: true
     }
   });
 
   if (!user) {
+<<<<<<< HEAD
     throw new Error('User not found');
   }
 
@@ -43,6 +70,19 @@ export async function getOnboardingData(): Promise<OnboardingData> {
 
   const organization = await prisma.organization.findUnique({
     where: { id: user.organizationId },
+=======
+    return redirect(Routes.Root);
+  }
+
+  if (!user.organizationId) {
+    return redirect(Routes.Root);
+  }
+
+  const organization = await prisma.organization.findUnique({
+    where: {
+      id: user.organizationId
+    },
+>>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66
     select: {
       id: true,
       name: true,
@@ -51,6 +91,7 @@ export async function getOnboardingData(): Promise<OnboardingData> {
   });
 
   if (!organization) {
+<<<<<<< HEAD
     throw new Error('Organization not found');
   }
 
@@ -68,3 +109,13 @@ export async function getOnboardingData(): Promise<OnboardingData> {
     }
   };
 }
+=======
+    return redirect(Routes.Root);
+  }
+
+  return {
+    user,
+    organization
+  };
+});
+>>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66

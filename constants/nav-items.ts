@@ -17,7 +17,7 @@ import type { NavItem } from '@/types/nav-item';
 export const mainNavItems: NavItem[] = [
   {
     title: 'Home',
-    href: Routes.Home,
+    href: Routes.Root,
     icon: HomeIcon
   },
   // {
