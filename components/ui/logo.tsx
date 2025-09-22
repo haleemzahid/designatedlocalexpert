@@ -26,9 +26,9 @@ export function Logo({
             <div className="relative w-[70px] h-[70px]">
               {/* Overlay: turns white areas black */}
               <img
-                src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
+                src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/cropped-cropped-fav-150x150.png"
                 alt="Logo black inside"
-                className="absolute inset-0 object-contain dark:hidden brightness-0 mix-blend-multiply"
+                className=" object-contain dark:hidden "
               />
               {/* Dark mode logo */}
               <img
