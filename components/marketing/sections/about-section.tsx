@@ -650,41 +650,63 @@ function TestimonialSlider(): React.JSX.Element {
   };
 
   return (
-    <div className="relative flex items-center justify-between max-w-7xl mx-auto">
-      {/* Left Arrow - Outside content */}
-      <button
-        onClick={goToPrevious}
-        className="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors z-10 -ml-6"
-        aria-label="Previous testimonial"
-      >
-        <svg
-          className="w-6 h-6 text-muted-foreground"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+    <div className="relative max-w-7xl mx-auto">
+      {/* Desktop Navigation - Outside container (lg and up) */}
+      <div className="hidden lg:flex lg:absolute lg:inset-y-0 lg:left-0 lg:right-0 lg:items-center lg:justify-between lg:pointer-events-none lg:z-10">
+        <button
+          onClick={goToPrevious}
+          className="pointer-events-auto w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors -ml-6"
+          aria-label="Previous testimonial"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
-      </button>
+          <svg
+            className="w-6 h-6 text-muted-foreground"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <button
+          onClick={goToNext}
+          className="pointer-events-auto w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors -mr-6"
+          aria-label="Next testimonial"
+        >
+          <svg
+            className="w-6 h-6 text-muted-foreground"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
 
       {/* Main Testimonial Container */}
-      <div className="flex-1 mx-6">
+      <div className="px-4 lg:mx-6">
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.5 }}
-          className="flex items-center gap-8"
+          className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-8"
         >
-          {/* Client Image - Left Side */}
-          <div className="flex-shrink-0">
-            <div className="w-28 h-28 md:w-36 md:h-36 rounded-2xl overflow-hidden shadow-lg">
+          {/* Client Image */}
+          <div className="flex-shrink-0 mx-auto lg:mx-0">
+            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-36 lg:h-36 rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={testimonials[currentIndex].image}
                 alt={testimonials[currentIndex].name}
@@ -693,10 +715,10 @@ function TestimonialSlider(): React.JSX.Element {
             </div>
           </div>
 
-          {/* Testimonial Text and Info - Right Side */}
-          <div className="flex-1 ml-6">
+          {/* Testimonial Text and Info */}
+          <div className="flex-1 text-center lg:text-left lg:ml-0">
             <div className="mb-4">
-              <p className="text-foreground text-sm md:text-base leading-relaxed">
+              <p className="text-foreground text-sm md:text-base leading-relaxed px-2 lg:px-0">
                 "{testimonials[currentIndex].text}"
               </p>
             </div>
@@ -712,26 +734,48 @@ function TestimonialSlider(): React.JSX.Element {
         </motion.div>
       </div>
 
-      {/* Right Arrow - Outside content */}
-      <button
-        onClick={goToNext}
-        className="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors z-10 -mr-6"
-        aria-label="Next testimonial"
-      >
-        <svg
-          className="w-6 h-6 text-muted-foreground"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      {/* Mobile Navigation - Below content (hidden on lg+) */}
+      <div className="flex lg:hidden justify-center gap-4 mt-8 px-4">
+        <button
+          onClick={goToPrevious}
+          className="w-10 h-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          aria-label="Previous testimonial"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 5l7 7-7 7"
-          />
-        </svg>
-      </button>
+          <svg
+            className="w-4 h-4 text-muted-foreground"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
+
+        <button
+          onClick={goToNext}
+          className="w-10 h-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          aria-label="Next testimonial"
+        >
+          <svg
+            className="w-4 h-4 text-muted-foreground"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
     </div>
   );
 }
