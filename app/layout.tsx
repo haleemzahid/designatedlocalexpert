@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     'production planning, scheduling, manufacturing, operations, tracking, workflow, automation, planning software, scheduling solution',
   authors: [{ name: AppInfo.COMPANY_NAME }],
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png'
+    icon: 'https://designatedlocalexpert.com/wp-content/uploads/2022/07/cropped-cropped-fav-150x150.png',
+    shortcut: 'https://designatedlocalexpert.com/wp-content/uploads/2022/07/cropped-cropped-fav-150x150.png',
+    apple: 'https://designatedlocalexpert.com/wp-content/uploads/2022/07/cropped-cropped-fav-150x150.png'
   },
   manifest: `${getBaseUrl()}/manifest`,
   robots: {
