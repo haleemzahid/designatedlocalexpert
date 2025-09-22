@@ -21,8 +21,8 @@ export type ConnectedAccountSecurityAlertEmailData = {
   ipAddress?: string;
 };
 
-export const ConnectedAccountSecurityAlertEmail = ({ 
-  name, 
+export const ConnectedAccountSecurityAlertEmail = ({
+  name,
   accountProvider = 'third-party account',
   timestamp,
   ipAddress
@@ -42,7 +42,7 @@ export const ConnectedAccountSecurityAlertEmail = ({
           <Text className="text-[14px] leading-[24px] text-black">
             We detected that a new {accountProvider} was connected to your {AppInfo.APP_NAME} account.
           </Text>
-          
+
           {(timestamp || ipAddress) && (
             <Section className="my-[16px] rounded bg-[#f6f6f6] p-[16px]">
               <Text className="text-[14px] leading-[20px] text-black">
@@ -60,17 +60,17 @@ export const ConnectedAccountSecurityAlertEmail = ({
               )}
             </Section>
           )}
-          
+
           <Text className="text-[14px] leading-[24px] text-black">
-            If this was you, no action is needed. If you didn't connect this account, 
-            please secure your account immediately by changing your password and 
+            If this was you, no action is needed. If you didn't connect this account,
+            please secure your account immediately by changing your password and
             reviewing your connected accounts.
           </Text>
-          
+
           <Hr className="mx-0 my-[26px] w-full border border-solid border-[#eaeaea]" />
-          
+
           <Text className="text-[12px] leading-[24px] text-[#666666]">
-            This security alert was sent from {AppInfo.APP_NAME}. If you have any 
+            This security alert was sent from {AppInfo.APP_NAME}. If you have any
             concerns, please contact our support team.
           </Text>
         </Container>
