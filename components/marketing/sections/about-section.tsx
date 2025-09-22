@@ -126,7 +126,7 @@ export function AboutSection(): React.JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-3xl shadow-xl overflow-hidden max-w-sm"
+                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl shadow-xl overflow-hidden max-w-sm"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -136,7 +136,7 @@ export function AboutSection(): React.JSX.Element {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-card-foreground mb-1">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                     Anthony Grynchal
                   </h3>
                   <p className="text-muted-foreground text-sm">
@@ -151,7 +151,7 @@ export function AboutSection(): React.JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-card rounded-3xl shadow-xl overflow-hidden max-w-sm"
+                className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-3xl shadow-xl overflow-hidden max-w-sm"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -161,7 +161,7 @@ export function AboutSection(): React.JSX.Element {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-card-foreground mb-1">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                     Jeff Baenen
                   </h3>
                   <p className="text-muted-foreground text-sm">Co-Founder & Chairman</p>
@@ -385,7 +385,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -395,7 +395,7 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Google Business Profile
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -413,7 +413,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -423,7 +423,7 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Marketing To Sellers
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -441,7 +441,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -451,7 +451,7 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Marketing To Buyers
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -469,7 +469,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -479,7 +479,7 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Lifestyle Branding
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -497,7 +497,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -507,7 +507,7 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   On-Page SEO
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -525,7 +525,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -535,7 +535,7 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-card-foreground mb-4">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   Social Media Marketing
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -654,7 +654,7 @@ function TestimonialSlider(): React.JSX.Element {
       {/* Left Arrow - Outside content */}
       <button
         onClick={goToPrevious}
-        className="flex-shrink-0 w-12 h-12 bg-background rounded-full shadow-lg flex items-center justify-center hover:bg-muted transition-colors z-10 -ml-6"
+        className="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors z-10 -ml-6"
         aria-label="Previous testimonial"
       >
         <svg
@@ -715,7 +715,7 @@ function TestimonialSlider(): React.JSX.Element {
       {/* Right Arrow - Outside content */}
       <button
         onClick={goToNext}
-        className="flex-shrink-0 w-12 h-12 bg-background rounded-full shadow-lg flex items-center justify-center hover:bg-muted transition-colors z-10 -mr-6"
+        className="flex-shrink-0 w-12 h-12 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors z-10 -mr-6"
         aria-label="Next testimonial"
       >
         <svg
