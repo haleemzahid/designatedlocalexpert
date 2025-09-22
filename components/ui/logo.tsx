@@ -26,14 +26,21 @@ export function Logo({
       {!hideSymbol && (
         <div className="flex  items-center justify-center p-1">
           <div className="flex   items-center justify-center">
-            {/* DLE Logo */}
+            {/* DLE Logo - Light theme */}
             <img
-              style={{ maxWidth: 'fit-content', height: 'auto' }}
-              src="https://designatedlocalexpert.com/wp-content/uploads/al_opt_content/IMAGE/designatedlocalexpert.com/wp-content/uploads/2022/07/cropped-cropped-fav-167x167.png.bv.webp?bv_host=designatedlocalexpert.com"
+              src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
               alt="Designated Local Expert Logo"
               width="70"
               height="70"
-              className="object-contain"
+              className="object-contain dark:hidden"
+            />
+            {/* DLE Logo - Dark theme (with red ring and white text) */}
+            <img
+              src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
+              alt="Designated Local Expert Logo"
+              width="70"
+              height="70"
+              className="object-contain hidden dark:block hue-rotate-0 brightness-200 contrast-150"
             />
           </div>
         </div>
