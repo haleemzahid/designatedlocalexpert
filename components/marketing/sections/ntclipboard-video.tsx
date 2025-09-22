@@ -72,7 +72,7 @@ export function NTClipboardVideo({
 
               {/* Video description */}
               <div className="mt-8 grid grid-cols-1 gap-6 text-left md:grid-cols-3">
-                <div className="rounded-xl bg-white p-6 shadow-lg dark:bg-slate-800">
+                <div className="rounded-xl bg-card p-6 shadow-lg">
                   <h3 className="mb-2 text-lg font-semibold">
                     Step-by-Step Tutorial
                   </h3>
@@ -81,7 +81,7 @@ export function NTClipboardVideo({
                     exactly how to use EDGEBIC effectively.
                   </p>
                 </div>
-                <div className="rounded-xl bg-white p-6 shadow-lg dark:bg-slate-800">
+                <div className="rounded-xl bg-card p-6 shadow-lg">
                   <h3 className="mb-2 text-lg font-semibold">
                     Real-World Examples
                   </h3>
@@ -90,7 +90,7 @@ export function NTClipboardVideo({
                     transforms complex scheduling into organized workflows.
                   </p>
                 </div>
-                <div className="rounded-xl bg-white p-6 shadow-lg dark:bg-slate-800">
+                <div className="rounded-xl bg-card p-6 shadow-lg">
                   <h3 className="mb-2 text-lg font-semibold">
                     Time-Saving Tips
                   </h3>

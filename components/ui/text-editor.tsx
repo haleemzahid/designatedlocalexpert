@@ -169,9 +169,9 @@ function ToolbarPlugin(): React.JSX.Element {
         anchorNode.getKey() === 'root'
           ? anchorNode
           : $findMatchingParent(anchorNode, (e) => {
-              const parent = e.getParent();
-              return parent !== null && $isRootOrShadowRoot(parent);
-            });
+            const parent = e.getParent();
+            return parent !== null && $isRootOrShadowRoot(parent);
+          });
       if (element === null) {
         element = anchorNode.getTopLevelElementOrThrow();
       }
@@ -276,7 +276,7 @@ function ToolbarPlugin(): React.JSX.Element {
         type="button"
         variant="ghost"
         size="icon"
-        className={cn('size-8', isBold && 'bg-neutral-100')}
+        className={cn('size-8', isBold && 'bg-muted')}
         onClick={handleFormatBold}
       >
         <BoldIcon className="size-4 shrink-0" />
@@ -285,7 +285,7 @@ function ToolbarPlugin(): React.JSX.Element {
         type="button"
         variant="ghost"
         size="icon"
-        className={cn('size-8', isItalic && 'bg-neutral-100')}
+        className={cn('size-8', isItalic && 'bg-muted')}
         onClick={handleFormatItalic}
       >
         <ItalicIcon className="size-4 shrink-0" />
@@ -294,7 +294,7 @@ function ToolbarPlugin(): React.JSX.Element {
         type="button"
         variant="ghost"
         size="icon"
-        className={cn('size-8', isUnderline && 'bg-neutral-100')}
+        className={cn('size-8', isUnderline && 'bg-muted')}
         onClick={handleFormatUnderline}
       >
         <UnderlineIcon className="size-4 shrink-0" />

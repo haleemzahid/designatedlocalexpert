@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-<<<<<<< HEAD
 import { useRouter } from 'next/navigation';
 import { Building2, CheckCircle, User } from 'lucide-react';
 
@@ -61,7 +60,7 @@ export function OnboardingWizard({
         setCurrentStep('organization');
       } else {
         setCurrentStep('complete');
-        router.push(Routes.Home);
+        router.push(Routes.Root);
       }
     } catch (error) {
       console.error('Failed to complete user onboarding:', error);
@@ -77,7 +76,7 @@ export function OnboardingWizard({
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setCurrentStep('complete');
-      router.push(Routes.Home);
+      router.push(Routes.Root);
     } catch (error) {
       console.error('Failed to complete organization onboarding:', error);
     } finally {
@@ -90,8 +89,8 @@ export function OnboardingWizard({
       <div className="container mx-auto max-w-md py-12">
         <Card>
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900">
-              <User className="size-6 text-blue-600 dark:text-blue-400" />
+            <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10">
+              <User className="size-6 text-primary" />
             </div>
             <CardTitle>Welcome! Let's set up your profile</CardTitle>
             <CardDescription>
@@ -138,8 +137,8 @@ export function OnboardingWizard({
       <div className="container mx-auto max-w-md py-12">
         <Card>
           <CardHeader className="text-center">
-            <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
-              <Building2 className="size-6 text-green-600 dark:text-green-400" />
+            <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10">
+              <Building2 className="size-6 text-primary" />
             </div>
             <CardTitle>Set up your organization</CardTitle>
             <CardDescription>
@@ -190,8 +189,8 @@ export function OnboardingWizard({
     <div className="container mx-auto max-w-md py-12">
       <Card>
         <CardHeader className="text-center">
-          <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
-            <CheckCircle className="size-6 text-green-600 dark:text-green-400" />
+          <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-primary/10">
+            <CheckCircle className="size-6 text-primary" />
           </div>
           <CardTitle>All set!</CardTitle>
           <CardDescription>
@@ -202,75 +201,3 @@ export function OnboardingWizard({
     </div>
   );
 }
-=======
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
-interface OnboardingWizardProps {
-  user: {
-    id: string;
-    name: string | null;
-    email: string | null;
-    phone: string | null;
-    image: string | null;
-    completedOnboarding: boolean;
-    organizationId: string | null;
-  };
-  organization: {
-    id: string;
-    name: string;
-    completedOnboarding: boolean;
-  };
-}
-
-export function OnboardingWizard({ user, organization }: OnboardingWizardProps): React.JSX.Element {
-  return (
-    <div className="container mx-auto flex min-h-screen items-center justify-center py-12">
-      <div className="mx-auto max-w-md space-y-6">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold tracking-tight">Welcome!</h1>
-          <p className="mt-2 text-muted-foreground">
-            Let's get you set up with your account.
-          </p>
-        </div>
-        
-        <Card>
-          <CardHeader>
-            <CardTitle>Onboarding Status</CardTitle>
-            <CardDescription>
-              Complete your setup to get started
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <p className="text-sm">
-                <strong>User:</strong> {user.name || user.email}
-              </p>
-              <p className="text-sm">
-                User onboarding: {user.completedOnboarding ? '✅ Complete' : '⏳ Pending'}
-              </p>
-            </div>
-            
-            <div className="space-y-2">
-              <p className="text-sm">
-                <strong>Organization:</strong> {organization.name}
-              </p>
-              <p className="text-sm">
-                Organization onboarding: {organization.completedOnboarding ? '✅ Complete' : '⏳ Pending'}
-              </p>
-            </div>
-            
-            {(!user.completedOnboarding || !organization.completedOnboarding) && (
-              <div className="mt-4 rounded-md bg-yellow-50 p-4 dark:bg-yellow-950/20">
-                <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                  Please complete your onboarding setup to continue.
-                </p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  );
-}
->>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66

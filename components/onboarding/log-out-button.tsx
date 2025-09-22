@@ -2,15 +2,6 @@
 
 import * as React from 'react';
 import { LogOut } from 'lucide-react';
-<<<<<<< HEAD
-
-import { Button } from '@/components/ui/button';
-
-export function LogOutButton(): React.JSX.Element {
-  const handleLogOut = (): void => {
-    // Use window location to redirect to logout endpoint
-    window.location.href = '/api/auth/signout';
-=======
 import { signOut } from 'next-auth/react';
 
 import { Button } from '@/components/ui/button';
@@ -25,23 +16,12 @@ export function LogOutButton({ className }: LogOutButtonProps): React.JSX.Elemen
     await signOut({
       callbackUrl: '/'
     });
->>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66
   };
 
   return (
     <Button
       variant="outline"
       size="sm"
-<<<<<<< HEAD
-      onClick={handleLogOut}
-      className="gap-2"
-    >
-      <LogOut className="size-4" />
-      Log out
-    </Button>
-  );
-}
-=======
       onClick={handleSignOut}
       className={cn('gap-2', className)}
     >
@@ -50,4 +30,3 @@ export function LogOutButton({ className }: LogOutButtonProps): React.JSX.Elemen
     </Button>
   );
 }
->>>>>>> f8ade40871fb3038c0782ad4330ba4f9f5dcce66

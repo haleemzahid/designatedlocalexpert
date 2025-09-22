@@ -70,7 +70,7 @@ export function NTClipboardDemo(): React.JSX.Element {
                 ))}
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-8 shadow-2xl dark:bg-slate-800">
+            <div className="rounded-2xl bg-card p-8 shadow-2xl">
               <h3 className="mb-6 flex items-center gap-2 text-xl font-semibold">
                 <CheckIcon className="size-5 text-green-500" />
                 Live Preview

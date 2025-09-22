@@ -266,7 +266,7 @@ const Pointer = ({
       {...other}
     >
       <div
-        className="size-4 -translate-y-px translate-x-[-8px] rounded-full bg-gray-200 shadow-[0px_1px_4px_0px_rgba(0,0,0,0.37)]"
+        className="size-4 -translate-y-px translate-x-[-8px] rounded-full bg-border shadow-[0px_1px_4px_0px_rgba(0,0,0,0.37)]"
         {...omit(fillProps, ['className'])}
       />
     </div>
@@ -466,9 +466,8 @@ const Saturation = React.forwardRef<HTMLDivElement, SaturationProps>(
         ref={ref}
         className="relative inset-0 h-[130px] w-full cursor-crosshair"
         style={{
-          backgroundImage: `linear-gradient(0deg, #000, transparent), linear-gradient(90deg, #fff, hsl(${
-            hsva?.h ?? hue
-          }, 100%, 50%))`,
+          backgroundImage: `linear-gradient(0deg, #000, transparent), linear-gradient(90deg, #fff, hsl(${hsva?.h ?? hue
+            }, 100%, 50%))`,
           ...style
         }}
         onMove={handleChange}
@@ -523,9 +522,8 @@ const Alpha = React.forwardRef<HTMLDivElement, AlphaProps>(
     };
 
     const colorTo = hsvaToHslaString(Object.assign({}, hsva, { a: 1 }));
-    const innerBackground = `linear-gradient(to ${
-      direction === 'horizontal' ? 'right' : 'bottom'
-    }, rgba(244, 67, 54, 0) 0%, ${colorTo} 100%)`;
+    const innerBackground = `linear-gradient(to ${direction === 'horizontal' ? 'right' : 'bottom'
+      }, rgba(244, 67, 54, 0) 0%, ${colorTo} 100%)`;
     const posProps: { left?: string; top?: string } = {};
     if (direction === 'horizontal') {
       posProps.left = `${hsva.a * 100}%`;
@@ -536,7 +534,7 @@ const Alpha = React.forwardRef<HTMLDivElement, AlphaProps>(
     return (
       <div
         ref={ref}
-        className={cn('relative bg-white', className)}
+        className={cn('relative bg-background', className)}
         style={{
           background:
             'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGAQYcAP3uCTZhw1gGGYhAGBZIA/nYDCgBDAm9BGDWAAJyRCgLaBCAAgXwixzAS0pgAAAABJRU5ErkJggg==) left center',
@@ -587,9 +585,8 @@ const Hue = React.forwardRef<HTMLDivElement, HueProps>(
       <Alpha
         ref={ref}
         direction={direction}
-        background={`linear-gradient(to ${
-          direction === 'horizontal' ? 'right' : 'bottom'
-        }, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)`}
+        background={`linear-gradient(to ${direction === 'horizontal' ? 'right' : 'bottom'
+          }, rgb(255, 0, 0) 0%, rgb(255, 255, 0) 17%, rgb(0, 255, 0) 33%, rgb(0, 255, 255) 50%, rgb(0, 0, 255) 67%, rgb(255, 0, 255) 83%, rgb(255, 0, 0) 100%)`}
         hsva={{ h: hue, s: 100, v: 100, a: hue / 360 }}
         onChange={(_, interaction) => {
           onChange?.({

@@ -32,7 +32,7 @@ export function AboutSection(): React.JSX.Element {
             <h2 className="mb-4 text-2xl font-bold md:text-3xl">
               Your Trusted Partner in Real Estate SEO & Local Marketing
             </h2>
-            <p className="mb-4 leading-relaxed font-bold">
+            <p className="mb-4 leading-relaxed text-muted-foreground font-bold">
               DLE is the #1 leading authority in Realtor Google Maps Marketing
               and Local SEO for real estate agents 📍🌎. Our exclusive Geo
               Farming Designation combined with our proprietary real estate SEO
@@ -40,20 +40,20 @@ export function AboutSection(): React.JSX.Element {
               consistently capture local listings and dominate their approved
               city market.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 leading-relaxed text-muted-foreground">
               We excel as the top real estate SEO company and digital marketing
               agency for realtors, specializing in Google Business Profile
               (Google My Business) optimization, real estate SEO services, and
               comprehensive online marketing strategies for real estate agents.
             </p>
-            <p className="mb-4 leading-relaxed">
+            <p className="mb-4 text-muted-foreground leading-relaxed">
               Our focus on local SEO for Realtors, Google Maps SEO, realtor
               website SEO, and technical SEO services ensures your brand is
               easily discovered online. With our SEO for real estate marketing
               solutions, you can rank higher on Google, increase visibility, and
               attract more clients.
             </p>
-            <p className="mb-6 leading-relaxed">
+            <p className="mb-6 text-muted-foreground leading-relaxed">
               At DLE Network, we help agents elevate their professional image,
               build a powerful online presence for real estate, and stand out in
               their community with our expert real estate SEO and digital
@@ -126,7 +126,7 @@ export function AboutSection(): React.JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-3xl shadow-xl overflow-hidden max-w-sm"
+                className="bg-card rounded-3xl shadow-xl overflow-hidden max-w-sm"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -136,10 +136,10 @@ export function AboutSection(): React.JSX.Element {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-card-foreground mb-1">
                     Anthony Grynchal
                   </h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-muted-foreground text-sm">
                     Founder, CEO & Mr. Claremont
                   </p>
                 </div>
@@ -151,7 +151,7 @@ export function AboutSection(): React.JSX.Element {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-3xl shadow-xl overflow-hidden max-w-sm"
+                className="bg-card rounded-3xl shadow-xl overflow-hidden max-w-sm"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -161,10 +161,10 @@ export function AboutSection(): React.JSX.Element {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
+                  <h3 className="text-xl font-bold text-card-foreground mb-1">
                     Jeff Baenen
                   </h3>
-                  <p className="text-gray-600 text-sm">Co-Founder & Chairman</p>
+                  <p className="text-muted-foreground text-sm">Co-Founder & Chairman</p>
                 </div>
               </motion.div>
             </div>
@@ -182,7 +182,7 @@ export function AboutSection(): React.JSX.Element {
                     Our Work Inspires Smiles
                   </span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 leading-tight">
                   The Faces
                   <br />
                   Behind Our
@@ -214,7 +214,7 @@ export function AboutSection(): React.JSX.Element {
       {/* Solutions Section */}
       <section className="relative w-full py-16 ">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-center lg:flex-row items-start gap-12">
+          <div className="flex flex-col items-center lg:flex-row lg:items-start gap-12">
             {/* Left Side - Image */}
             <div className="lg:w-1/2">
               <img
@@ -243,10 +243,10 @@ export function AboutSection(): React.JSX.Element {
                       #1
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
+                      <h3 className="font-bold text-foreground mb-2">
                         Being Remembered
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         We ensure your brand stays at the forefront of clients'
                         minds with strategic real estate SEO marketing, digital
                         marketing for real estate agents, and realtor branding
@@ -261,10 +261,10 @@ export function AboutSection(): React.JSX.Element {
                       #2
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
+                      <h3 className="font-bold text-foreground mb-2">
                         Being Found
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         Our proven local SEO services for realtors and Google
                         Business Profile optimization for real estate agents
                         boost your online visibility, making you easily
@@ -280,10 +280,10 @@ export function AboutSection(): React.JSX.Element {
                       #3
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
+                      <h3 className="font-bold text-foreground mb-2">
                         Finding Sellers
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         DLE helps you effectively target homeowners considering
                         selling with tailored SEO for real estate listings, real
                         estate lead generation SEO, and local search engine
@@ -298,10 +298,10 @@ export function AboutSection(): React.JSX.Element {
                       #4
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
+                      <h3 className="font-bold text-foreground mb-2">
                         Rising Above the Crowd
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         Stand out as the go-to local real estate agent in your
                         market with our advanced real estate SEO strategies,
                         realtor website SEO optimization, and best SEO services
@@ -316,10 +316,10 @@ export function AboutSection(): React.JSX.Element {
                       #5
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-2">
+                      <h3 className="font-bold text-foreground mb-2">
                         Attracting More Buyers & Sellers
                       </h3>
-                      <p className="text-gray-700 text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-sm leading-relaxed">
                         Enhance your property listings with real estate listings
                         SEO, real estate digital marketing services, and SEO for
                         Realtors to attract more qualified buyers and motivated
@@ -330,7 +330,7 @@ export function AboutSection(): React.JSX.Element {
                 </div>
 
                 <div className="mt-8">
-                  <button className="bg-black hover:bg-gray-800 text-white font-semibold px-8 py-3 rounded-full transition-colors shadow-lg flex items-center gap-2">
+                  <button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-full transition-colors shadow-lg flex items-center gap-2">
                     Read More For Solutions
                     <svg
                       className="w-4 h-4"
@@ -369,7 +369,7 @@ export function AboutSection(): React.JSX.Element {
                 Our Services
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
               Our Real Estate SEO Services
             </h2>
             <button className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded-full transition-colors shadow-lg">
@@ -385,7 +385,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -395,10 +395,10 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">
                   Google Business Profile
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Optimize your Google Business Profile for real estate agents
                   to rank higher in search results with our proven real estate
                   SEO services. We specialize in Google Maps SEO for realtors,
@@ -413,7 +413,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -423,10 +423,10 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">
                   Marketing To Sellers
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Utilize targeted SEO strategies for real estate sellers and
                   print marketing campaigns to reach homeowners ready to sell.
                   Our unique Google Business Profile hacks ensure you capture
@@ -441,7 +441,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -451,10 +451,10 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">
                   Marketing To Buyers
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Implement listing sign SEO strategies and digital marketing
                   for real estate buyers to attract qualified home buyers
                   directly to you. With realtor website SEO, you'll consistently
@@ -469,7 +469,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -479,10 +479,10 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">
                   Lifestyle Branding
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Demonstrate your pride in your community and stand out as the
                   go-to agent with real estate lifestyle branding. Our SEO for
                   real estate agents highlights your role as the trusted local
@@ -497,7 +497,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -507,10 +507,10 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">
                   On-Page SEO
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Boost your website rankings with real estate on-page SEO
                   services. Our real estate agent SEO consultants refine your
                   content, site structure, and keywords, ensuring higher search
@@ -525,7 +525,7 @@ export function AboutSection(): React.JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="w-16 h-16 mb-6 flex items-center justify-center">
@@ -535,10 +535,10 @@ export function AboutSection(): React.JSX.Element {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-xl font-bold text-card-foreground mb-4">
                   Social Media Marketing
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm leading-relaxed">
                   Elevate your real estate promotion strategies with expert
                   social media marketing for real estate agents. From Facebook
                   ads for realtors to Instagram marketing, we help you maximize
@@ -566,7 +566,7 @@ export function AboutSection(): React.JSX.Element {
                 We Love Them
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
               What Our Clients Have To Say
             </h2>
           </motion.div>
@@ -654,11 +654,11 @@ function TestimonialSlider(): React.JSX.Element {
       {/* Left Arrow - Outside content */}
       <button
         onClick={goToPrevious}
-        className="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors z-10 -ml-6"
+        className="flex-shrink-0 w-12 h-12 bg-background rounded-full shadow-lg flex items-center justify-center hover:bg-muted transition-colors z-10 -ml-6"
         aria-label="Previous testimonial"
       >
         <svg
-          className="w-6 h-6 text-gray-600"
+          className="w-6 h-6 text-muted-foreground"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -696,15 +696,15 @@ function TestimonialSlider(): React.JSX.Element {
           {/* Testimonial Text and Info - Right Side */}
           <div className="flex-1 ml-6">
             <div className="mb-4">
-              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+              <p className="text-foreground text-sm md:text-base leading-relaxed">
                 "{testimonials[currentIndex].text}"
               </p>
             </div>
             <div>
-              <h4 className="text-base md:text-lg font-bold text-red-600 mb-1">
+              <h4 className="text-base md:text-lg font-bold text-primary mb-1">
                 {testimonials[currentIndex].name}
               </h4>
-              <p className="text-gray-600 font-medium text-sm">
+              <p className="text-muted-foreground font-medium text-sm">
                 {testimonials[currentIndex].title}
               </p>
             </div>
@@ -715,11 +715,11 @@ function TestimonialSlider(): React.JSX.Element {
       {/* Right Arrow - Outside content */}
       <button
         onClick={goToNext}
-        className="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors z-10 -mr-6"
+        className="flex-shrink-0 w-12 h-12 bg-background rounded-full shadow-lg flex items-center justify-center hover:bg-muted transition-colors z-10 -mr-6"
         aria-label="Next testimonial"
       >
         <svg
-          className="w-6 h-6 text-gray-600"
+          className="w-6 h-6 text-muted-foreground"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

@@ -87,13 +87,13 @@ export function NTClipboardTestimonials(): React.JSX.Element {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl dark:border-gray-700 dark:bg-slate-900"
+              className="group relative overflow-hidden rounded-2xl border bg-card p-6 shadow-lg transition-all hover:-translate-y-2 hover:shadow-xl"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-indigo-50/30 opacity-0 transition-opacity group-hover:opacity-100 dark:from-blue-900/10 dark:to-indigo-900/10" />
 
               <div className="relative">
                 {/* Quote */}
-                <blockquote className="mb-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+                <blockquote className="mb-6 text-card-foreground leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
 
@@ -112,17 +112,17 @@ export function NTClipboardTestimonials(): React.JSX.Element {
                     <div className="font-bold text-gray-900 dark:text-white text-lg">
                       {testimonial.name}
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                    <div className="text-sm text-muted-foreground">
                       {testimonial.role}
                     </div>
-                    <div className="text-sm font-medium text-blue-600 dark:text-blue-400">
+                    <div className="text-sm font-medium text-primary">
                       {testimonial.location}
                     </div>
                   </div>
                 </div>
 
                 {/* Company Badge */}
-                <div className="mt-3 inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+                <div className="mt-3 inline-flex rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
                   {testimonial.company}
                 </div>
               </div>

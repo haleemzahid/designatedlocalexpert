@@ -106,7 +106,7 @@ export function PrivacyPolicy(): React.JSX.Element {
           description="DLE Network (Designated Local Expert) Privacy Policy - Learn how we collect, use, and protect your data when you use our services."
         />
 
-        <Alert className="rounded-lg border-l-4 border-l-blue-500 bg-blue-50 dark:bg-blue-950/20">
+        <Alert className="rounded-lg border-l-4 border-l-primary bg-muted/30">
           <AlertDescription className="text-base">
             <strong>DLE Network Overview:</strong> The DLE Network operates
             www.designatedlocalexpert.com and www.mrcali.com. We are overseen by
@@ -156,7 +156,7 @@ export function PrivacyPolicy(): React.JSX.Element {
         </Accordion>
 
         <div className="space-y-6">
-          <Card className="border-l-4 border-l-green-500 bg-green-50 dark:bg-green-950/20">
+          <Card className="border-l-4 border-l-primary bg-muted/30">
             <CardContent className="pt-6">
               <CardTitle className="text-lg text-green-700 dark:text-green-400">
                 Network Protection & Confidentiality
@@ -204,7 +204,7 @@ export function PrivacyPolicy(): React.JSX.Element {
             </div>
           </div>
 
-          <Card className="bg-gray-50 dark:bg-gray-900/50">
+          <Card className="bg-muted/50">
             <CardContent className="pt-6">
               <p className="text-xs text-muted-foreground">
                 <strong>Last Modified:</strong> October 7th, 2019

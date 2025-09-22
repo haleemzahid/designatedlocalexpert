@@ -227,15 +227,15 @@ export function PurchaseSuccess() {
           </div>
 
           {isExpired ? (
-            <div className="rounded-md bg-red-50 p-4 text-center">
-              <p className="text-sm text-red-800">
+            <div className="rounded-md bg-destructive/10 p-4 text-center">
+              <p className="text-sm text-destructive-foreground">
                 Your download link has expired. Please contact support for
                 assistance.
               </p>
             </div>
           ) : remainingDownloads <= 0 ? (
-            <div className="rounded-md bg-yellow-50 p-4 text-center">
-              <p className="text-sm text-yellow-800">
+            <div className="rounded-md bg-muted/80 p-4 text-center">
+              <p className="text-sm text-muted-foreground">
                 You have used all available downloads. Please contact support if
                 you need additional downloads.
               </p>

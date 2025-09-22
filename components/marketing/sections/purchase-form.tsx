@@ -80,19 +80,19 @@ export function PurchaseForm({ onSuccess, price = '$49' }: PurchaseFormProps) {
 
   const handleInputChange =
     (field: keyof typeof formData) =>
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setFormData((prev) => ({
-        ...prev,
-        [field]: e.target.value
-      }));
-      // Clear error when user starts typing
-      if (errors[field]) {
-        setErrors((prev) => ({
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        setFormData((prev) => ({
           ...prev,
-          [field]: ''
+          [field]: e.target.value
         }));
-      }
-    };
+        // Clear error when user starts typing
+        if (errors[field]) {
+          setErrors((prev) => ({
+            ...prev,
+            [field]: ''
+          }));
+        }
+      };
 
   return (
     <form
@@ -100,7 +100,7 @@ export function PurchaseForm({ onSuccess, price = '$49' }: PurchaseFormProps) {
       className="space-y-6"
     >
       {errorMessage && (
-        <div className="rounded-md bg-red-50 p-4 text-sm text-red-800">
+        <div className="rounded-md bg-destructive/10 p-4 text-sm text-destructive-foreground">
           {errorMessage}
         </div>
       )}
