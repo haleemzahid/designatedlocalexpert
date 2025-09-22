@@ -212,7 +212,7 @@ export function AboutSection(): React.JSX.Element {
       </section>
 
       {/* Solutions Section */}
-      <section className="relative w-full py-16 bg-white">
+      <section className="relative w-full py-16 ">
         <div className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col items-center lg:flex-row items-start gap-12">
             {/* Left Side - Image */}
@@ -232,7 +232,7 @@ export function AboutSection(): React.JSX.Element {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold  mb-8">
                   Overcoming Realtor Challenges With DLE Solutions
                 </h2>
 
@@ -354,7 +354,7 @@ export function AboutSection(): React.JSX.Element {
       </section>
 
       {/* Services Section */}
-      <section className="relative w-full py-16 bg-gray-50">
+      <section className="relative w-full py-16">
         <div className="mx-auto max-w-7xl px-6">
           {/* Section Header */}
           <motion.div
@@ -551,7 +551,7 @@ export function AboutSection(): React.JSX.Element {
       </section>
 
       {/* Testimonials Section */}
-      <section className="relative w-full py-16 bg-white">
+      <section className="relative w-full py-16 ">
         <div className="mx-auto max-w-6xl px-6">
           {/* Section Header */}
           <motion.div

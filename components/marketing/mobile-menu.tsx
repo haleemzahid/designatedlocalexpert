@@ -65,7 +65,7 @@ export function MobileMenu({
         {...other}
       >
         <Link href={Routes.Root}>
-          <Logo />
+          <Logo hideWordmark />
         </Link>
         <Button
           variant="ghost"
@@ -142,6 +142,32 @@ function MainMobileMenu({
               )}
             >
               Home
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link
+              href={Routes.PrivacyPolicy}
+              onClick={onLinkClicked}
+              className={cn(
+                buttonVariants({ variant: 'ghost' }),
+                'w-full justify-start text-base font-normal',
+                pathname === Routes.PrivacyPolicy && 'bg-accent'
+              )}
+            >
+              Privacy Policy
+            </Link>
+          </li>
+          <li className="py-2">
+            <Link
+              href={Routes.TermsOfService}
+              onClick={onLinkClicked}
+              className={cn(
+                buttonVariants({ variant: 'ghost' }),
+                'w-full justify-start text-base font-normal',
+                pathname === Routes.TermsOfService && 'bg-accent'
+              )}
+            >
+              Terms of Service
             </Link>
           </li>
         </ul>
