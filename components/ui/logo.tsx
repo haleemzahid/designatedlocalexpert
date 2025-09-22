@@ -3,10 +3,6 @@ import * as React from 'react';
 import { AppInfo } from '@/constants/app-info';
 import { cn } from '@/lib/utils';
 
-// The logo size below is 96px x 96px in an 96px x 96px container (size-24).
-// Because of the larger size, the components <Sidebar /> and <Mobilesheet /> may need padding adjustments.
-// When you update the logo make sure to eventually adjust the pl-0.5 class in those two components if needed.
-
 export type LogoProps = React.HTMLAttributes<HTMLDivElement> & {
   hideSymbol?: boolean;
   hideWordmark?: boolean;
@@ -14,7 +10,7 @@ export type LogoProps = React.HTMLAttributes<HTMLDivElement> & {
 
 export function Logo({
   hideSymbol,
-  hideWordmark = false, // Show wordmark by default with logo
+  hideWordmark = false,
   className,
   ...other
 }: LogoProps): React.JSX.Element {
@@ -24,24 +20,24 @@ export function Logo({
       {...other}
     >
       {!hideSymbol && (
-        <div className="flex  items-center justify-center p-1">
-          <div className="flex   items-center justify-center">
-            {/* DLE Logo - Light theme */}
-            <img
-              src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
-              alt="Designated Local Expert Logo"
-              width="70"
-              height="70"
-              className="object-contain dark:hidden"
-            />
-            {/* DLE Logo - Dark theme (with red ring and white text) */}
-            <img
-              src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
-              alt="Designated Local Expert Logo"
-              width="70"
-              height="70"
-              className="object-contain hidden dark:block hue-rotate-0 brightness-200 contrast-150"
-            />
+        <div className="flex items-center justify-center p-1">
+          <div className="relative flex items-center justify-center w-[70px] h-[70px]">
+            {/* Base: Original logo (red border) */}
+            <div className="relative w-[70px] h-[70px]">
+              {/* Overlay: turns white areas black */}
+              <img
+                src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
+                alt="Logo black inside"
+                className="absolute inset-0 object-contain dark:hidden brightness-0 mix-blend-multiply"
+              />
+              {/* Dark mode logo */}
+              <img
+                src="https://designatedlocalexpert.com/wp-content/uploads/2022/07/DleImg.png"
+                alt="Logo dark mode"
+                className="hidden dark:block object-contain brightness-200 contrast-150"
+              />
+            </div>
+
           </div>
         </div>
       )}
