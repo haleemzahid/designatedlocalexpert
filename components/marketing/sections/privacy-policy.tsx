@@ -2,6 +2,7 @@ import * as React from 'react';
 import {
   AlertCircleIcon,
   BookIcon,
+  CloudIcon,
   DatabaseIcon,
   ScaleIcon,
   ShieldIcon,
@@ -20,12 +21,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const DATA_CARDS = [
-  {
-    title: 'DLE Network Overview',
-    icon: <BookIcon className="size-4 shrink-0" />,
-    content:
-      'The DLE Network (Designated Local Expert) operates www.designatedlocalexpert.com and is overseen by Mr. Cali, LLC as a Real Estate Network company.'
-  },
   {
     title: 'Personal Information',
     icon: <UserIcon className="size-4 shrink-0" />,
@@ -106,14 +101,61 @@ export function PrivacyPolicy(): React.JSX.Element {
           description="DLE Network (Designated Local Expert) Privacy Policy - Learn how we collect, use, and protect your data when you use our services."
         />
 
-        <Alert className="rounded-lg border-l-4 border-l-primary bg-muted/30">
-          <AlertDescription className="text-base">
-            <strong>DLE Network Overview:</strong> The DLE Network operates
-            www.designatedlocalexpert.com and www.mrcali.com. We are overseen by
-            Mr. Cali, LLC, a Real Estate Network company that understands the
-            importance of intellectual property protection.
-          </AlertDescription>
-        </Alert>
+        <Card className="w-full border-l-4 border-l-blue-500 bg-blue-50/50 dark:bg-blue-950/20">
+          <CardContent className="pt-6">
+            <CardTitle className="flex items-center gap-2 text-lg text-blue-700 dark:text-blue-400 mb-4">
+              <CloudIcon className="size-5 shrink-0" />
+              Google Drive Integration
+            </CardTitle>
+            <div className="space-y-4 text-sm leading-relaxed text-blue-800 dark:text-blue-300">
+              <p>
+                Our service integrates with Google Drive to help you organize and manage files directly from the Designated Local Expert platform.
+              </p>
+
+              <div className="space-y-4">
+                <div>
+                  <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Information We Access:</h4>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>When you connect your Google Drive account, we request access only to the folders and files created or managed through our platform.</li>
+                    <li>We may temporarily access metadata (such as folder names, IDs, and file details) to support folder structure and file operations.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">How We Use Google Drive Data:</h4>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>When you connect your Google Drive account, our system automatically creates one main folder.</li>
+                    <li>Within this main folder, three default subfolders are created through our interface.</li>
+                    <li>You may also create additional subfolders inside these folders as needed.</li>
+                    <li>Files (such as images) can be uploaded to and downloaded from these folders via our platform.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Data Storage and Sharing:</h4>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>We do not permanently store your Google Drive files on our servers. Files and folders are processed only for the duration needed to complete the requested operations.</li>
+                    <li>We do not share your Google Drive data with any third parties.</li>
+                    <li>We do not sell or use your Google Drive data for advertising purposes.</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Your Control:</h4>
+                  <ul className="list-disc list-inside space-y-1 ml-2">
+                    <li>You can disconnect your Google Drive account at any time from your Google Account Permissions page.</li>
+                    <li>Once disconnected, our platform will no longer have access to your Drive folders or files.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/70 dark:bg-gray-800/70 p-3 rounded-lg border border-blue-200 dark:border-blue-800">
+                  <h4 className="font-semibold mb-2 text-blue-900 dark:text-blue-200">Compliance with Google API Services User Data Policy:</h4>
+                  <p>Our use of information received from Google APIs will adhere to the Google API Services User Data Policy, including the Limited Use requirements.</p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {DATA_CARDS.map((item, index) => (
