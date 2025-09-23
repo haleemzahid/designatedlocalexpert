@@ -227,19 +227,19 @@ export function PrivacyPolicy(): React.JSX.Element {
                 <p>
                   Email:{' '}
                   <a
-                    href="mailto:Info@MrCali.com"
+                    href="mailto:admin@designatedlocalexpert.net"
                     className="text-blue-500 hover:underline"
                   >
-                    Info@MrCali.com
+                    admin@designatedlocalexpert.net
                   </a>
                 </p>
                 <p>
                   For children's privacy concerns:{' '}
                   <a
-                    href="mailto:contact@MrCali.com"
+                    href="mailto:admin@designatedlocalexpert.net"
                     className="text-blue-500 hover:underline"
                   >
-                    contact@MrCali.com
+                    admin@designatedlocalexpert.net
                   </a>
                 </p>
               </div>
